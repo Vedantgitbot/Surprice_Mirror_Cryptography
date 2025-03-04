@@ -4,7 +4,7 @@ def surprise_mirror_encrypt(password):
     mapping_digits = {'1': '!', '2': '@', '3': '#', '4': '$', '5': '%', 
                       '6': '^', '7': '&', '8': '*', '9': '(', '0': ')'}
     
-    special_chars = ['.', ',', ';', "'", '"', ':', '[', ']', '{', '}', '\\', '|']
+    special_chars = ['.', ',', ';', "'", '"', ':', '[', ']', '{', '}', '\', '|']
     
     def reverse_letter(char):
         if char.isalpha():
