@@ -52,10 +52,26 @@ def surprise_mirror_decrypt(encrypted_password):
     return decrypted_password
 
 
-password = "Hello1234"
-encrypted = surprise_mirror_encrypt(password)
-decrypted = surprise_mirror_decrypt(encrypted)
-
-print(f"Original Password: {password}")
-print(f"Encrypted: {encrypted}")
-print(f"Decrypted: {decrypted}")
+while True:
+    print("\n1. Encrypt a Password")
+    print("2. Decrypt a Password")
+    print("3. Exit")
+    
+    choice = input("Choose an option (1/2/3): ")
+    
+    if choice == "1":
+        password = input("Enter a password to encrypt (minimum 8 characters): ")
+        encrypted = surprise_mirror_encrypt(password)
+        print(f"Encrypted Password: {encrypted}")
+    
+    elif choice == "2":
+        encrypted_password = input("Enter the encrypted password to decrypt: ")
+        decrypted = surprise_mirror_decrypt(encrypted_password)
+        print(f"Decrypted Password: {decrypted}")
+    
+    elif choice == "3":
+        print("Exiting program.")
+        break
+    
+    else:
+        print("Invalid choice. Please enter 1, 2, or 3.")
